@@ -1,0 +1,166 @@
+/* scroll bars arent for ie or mozilla whoops :/ */
+::-webkit-scrollbar {
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(0,0,0,0);
+    border-radius:10px;
+}
+
+::-webkit-scrollbar-thumb{
+    background:rgb(85, 85, 240);
+    border-radius:10px;
+}
+
+#nextPiece {
+    width:150px;
+    height:75px;
+}
+
+#game {
+
+    height: 600px;
+    padding: 5px;
+    background:azure;
+    border-style: solid;
+    border-color:black;
+    border-radius: 6px;
+    margin-left:0px;
+    margin-right:0px;
+
+}
+
+
+#menuButtons {
+    display:grid;
+    grid-template-columns:45% 45%;
+    grid-column-gap: 10px;
+    grid-row-gap: 5px;
+    margin:0px 0px 0px 0px;
+    
+}
+
+#homeMenu {
+    margin-left:35%;
+    margin-right:35%;
+    margin-top:12.5%;
+    margin-bottom:10%;
+}
+
+#skins {
+    height:80vh;
+    width:60%;
+    margin-left:auto;
+    margin-right:auto;
+    top:20%;
+    background-color:azure;
+    border-style:none;
+    border-radius:12px;
+}
+
+#skinbox {
+    margin-left:5%;
+    margin-right:5%;
+    width:90%;
+    height:80%;
+    background-color:azure;
+    border-style:solid;
+    border-radius:12px;
+    border-color: rgb(128, 128, 250);
+}
+#menuButtons > p {
+    padding:2px;
+    background:azure;
+    border-style:none;
+    border-radius:8px;
+    text-align:center;
+    width: 100%;
+
+    font-size: 24px;
+
+    line-height:70px;
+    margin: 0px 0px 0px 0px;
+    cursor: pointer;
+    
+}
+
+#thingThatHoldsThisTogether > div{
+    width:96%;
+    height:22.5%;
+    margin:1% 2% 1% 2%;
+    background-color:azure;
+    border-style:solid;
+    border-color:rgb(85, 85, 240);
+    border-width:1px;
+    border-radius:12px;
+}
+
+.gridded{
+    display: grid;
+    grid-template-columns: 20% 50% 20%;
+    grid-column-gap:5%;
+}
+
+.skinKeys{
+    padding:2px;
+    width:45%;
+    bottom:8px;
+    margin:2% 2% 0% 2%;
+    font-size:18px;
+    background-color:azure;
+    border-style:solid;
+    border-color:rgb(85, 85, 240);
+    border-width:1px;
+    border-radius:12px;
+    text-align:center;
+    cursor: pointer;
+}
+
+.box > div {
+    background-color:azure;
+    border-radius:12px;
+    padding:5px ;
+
+}
+
+.titleNorm {
+    text-align:center;
+    font-size:18px;
+    font-weight: bold;
+}
+
+
+
+.header {
+    text-align:center;
+    font-size:48px;
+    background-color: azure;
+    border-style:none;
+    border-radius: 16px;
+    width:60%;
+    margin-left:auto;
+    margin-right:auto;
+
+}
+
+.overlay {
+    position: fixed;
+    background-color:azure;
+    opacity:0.9;
+    border-style:none;
+    border-radius:16px;
+    margin-left: auto;
+    margin-right:auto;
+    height:66%;
+    width:50%;
+    top:100px;
+    left:25%;
+    text-align:center;
+}
+
+body {
+    background-color: rgb(128, 128, 250);
+}
+

@@ -1,0 +1,108 @@
+<!DOCTYPE html> 
+<head>
+    <title> Tetris </title>
+    <link rel="stylesheet" type="text/css" href="tetrisWithHats.css"/>
+    <script src="jQuery.js"></script>
+    <script src="tetrisWithHats.js"></script>
+    <script src="extraDraws.js"></script>
+    <script src="skinSkills.js"></script>
+</head>
+<body oncontextmenu="return false;">
+    <div class="header" id="titllle">
+        <strong> Tetris with SKIN BOYE </strong>
+    </div>
+    <br height="20px">
+
+    <!-- STARTING MENU HERE -->
+    <div id="homeMenu">
+        <div id="menuButtons">
+            <p onclick="changeTo(1);"> Play </p>
+            <p onclick="changeTo(0.2);"> Skins </p>
+            <p> Save Progress </p>
+            <p> Settings </p>
+
+        </div>
+
+    </div>
+
+    <!-- SKINS HERE -->
+    <div id="skins">
+        <p class="titleNorm" style="font-size:36px;"> Skins Registry </p>
+        <!-- container for the thing -->
+        <div id="skinbox">
+            <!-- slideshow panel of skins -->
+            <div style="height:88%;overflow: scroll;" id="thingThatHoldsThisTogether">
+                <div style="background-color:rgb(253, 255, 137);" id="defaultTPack"></div>
+            </div>
+            <!-- buttons at the bottom -->
+            <div class="skinKeys" onclick="newPack();"> ADD </div>
+        </div>
+
+    </div>
+
+    <!-- pack adding overlay -->
+    <div class="overlay" id="skinAdding" style="background-color:#9fdada;padding:10px;top:200px;height:33%;">
+        <canvas width="40" height="40" style="float:right;" id="xonskinlay" onclick="changeTo(0.2);"> </canvas>
+        <br>
+        <p class="titleNorm" style="font-size:24px;"> New Skin </p>
+        <p style="text-align:left;margin-left:auto;margin-right:auto;"> Name: <input type="text" size="72" id="theName" style="width:90%;" /></p>
+        <p style="text-align:left;margin-left:auto;margin-right:auto;"> Code: <input type="text" size="72" id="theNewCode" style="width:90%;"/></p>
+        <p class="skinKeys" style="margin-left:auto;margin-right:auto;" onclick="createPack();"> Register </p>
+    </div>
+
+    <!-- THE GAME STARTS HERE -->
+    <div class="gridded" id="gameBoard">
+        <div class="box">
+            <div >
+                <p class="titleNorm"> Next Piece! </p>
+                <canvas id="nextPiece" width="150" height="75">
+
+                </canvas>
+
+            </div>
+            <br>
+            <div >
+                <p class="titleNorm"> Statistics </p>
+                <div style="padding-left:6px;">
+                    <p> Score: </p>
+                    <p id="cleared"> Rows Cleared: 0</p>
+                    <p> Blocks Placed: </p>
+                </div>
+
+            </div>
+            <br>
+            <div id="begin"> 
+                <h1 style="font-size:32px;text-align:center;cursor:pointer;" onclick="beginGame();" > PLAY </h1>
+            </div>
+        </div>
+        <div class="box" id = "gmHold">
+
+            <canvas id="game" width="1000" height="2000">
+
+            </canvas>
+
+        </div>
+        <div class="box">
+            <div>
+                <p class="titleNorm"> Time Played</p>
+                <p> </p>
+            </div>
+            <br>
+            <div>
+                <p class="titleNorm"> Controls </p>
+            </div>
+            <br>
+            <div>
+                <p class="titleNorm"> Settings </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- DEATH SCREEN HERE -->
+    <div id="death">
+        <div class="overlay">
+            <h1> GAME OVER </h1>
+            <p> stats </p>
+        </div>
+    </div>
+</body>
